@@ -1,0 +1,20 @@
+[package]
+name = "peasy-audio"
+version = "0.1.1"
+edition = "2021"
+authors = ["PeasyTools"]
+description = "Audio processing library for Rust — convert between formats (MP3, WAV, OGG, FLAC, AAC), trim, merge, normalize volume. FFmpeg-powered with safe Rust bindings via std::process."
+license = "MIT"
+repository = "https://github.com/peasytools/peasy-audio-rs"
+homepage = "https://peasyaudio.com"
+documentation = "https://docs.rs/peasy-audio"
+readme = "README.md"
+keywords = ["audio", "ffmpeg", "mp3", "wav", "convert"]
+categories = ["multimedia::audio", "command-line-utilities"]
+
+exclude = ["target/", "demo.gif", "demo.tape"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
