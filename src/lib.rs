@@ -1,7 +1,7 @@
-//! peasy-audio — Audio processing — convert, trim, merge, normalize.
-//!
-//! Audio processing library for Rust — convert between formats (MP3, WAV, OGG, FLAC, AAC), trim, merge, normalize volume.
+pub mod client;
+pub mod error;
+pub mod types;
 
-mod engine;
-
-pub use engine::*;
+pub use client::Client;
+pub use error::{PeasyError, Result};
+pub use types::*;
