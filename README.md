@@ -3,6 +3,8 @@
 [![crates.io](https://img.shields.io/crates/v/peasy-audio)](https://crates.io/crates/peasy-audio)
 [![docs.rs](https://docs.rs/peasy-audio/badge.svg)](https://docs.rs/peasy-audio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![crates.io](https://agentgif.com/badge/crates/peasy-audio/version.svg)](https://crates.io/crates/peasy-audio)
+[![GitHub stars](https://agentgif.com/badge/github/peasytools/peasy-audio-rs/stars.svg)](https://github.com/peasytools/peasy-audio-rs)
 
 Async Rust client for the [PeasyAudio](https://peasyaudio.com) API — analyze BPM, calculate bitrate, and convert audio formats. Built with reqwest, serde, and tokio.
 
