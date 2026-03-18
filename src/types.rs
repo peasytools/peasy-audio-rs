@@ -1,4 +1,5 @@
 use serde::Deserialize;
+use serde_json::Value;
 
 #[derive(Debug, Deserialize)]
 pub struct PaginatedResponse<T> {
@@ -12,35 +13,56 @@ pub struct PaginatedResponse<T> {
 pub struct Tool {
     pub slug: String,
     pub name: String,
+    #[serde(default)]
+    pub tagline: String,
+    #[serde(default)]
     pub description: String,
-    pub category: String,
+    #[serde(default)]
+    pub category: Value,
     #[serde(default)]
     pub url: String,
+}
+
+impl Tool {
+    /// Returns the best available description — tagline for list, description for detail.
+    pub fn display_desc(&self) -> &str {
+        if !self.tagline.is_empty() { &self.tagline } else { &self.description }
+    }
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Category {
     pub slug: String,
     pub name: String,
+    #[serde(default)]
     pub description: String,
+    #[serde(default)]
     pub tool_count: u32,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Format {
     pub slug: String,
+    #[serde(default, alias = "full_name")]
     pub name: String,
     pub extension: String,
+    #[serde(default)]
     pub mime_type: String,
+    #[serde(default)]
     pub category: String,
+    #[serde(default)]
     pub description: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Conversion {
+    #[serde(default)]
     pub source: String,
+    #[serde(default)]
     pub target: String,
+    #[serde(default)]
     pub description: String,
+    #[serde(default)]
     pub tool_slug: String,
 }
 
@@ -48,7 +70,9 @@ pub struct Conversion {
 pub struct GlossaryTerm {
     pub slug: String,
     pub term: String,
+    #[serde(default)]
     pub definition: String,
+    #[serde(default)]
     pub category: String,
 }
 
@@ -56,9 +80,13 @@ pub struct GlossaryTerm {
 pub struct Guide {
     pub slug: String,
     pub title: String,
+    #[serde(default)]
     pub description: String,
+    #[serde(default)]
     pub category: String,
+    #[serde(default)]
     pub audience_level: String,
+    #[serde(default)]
     pub word_count: u32,
 }
 
