@@ -286,6 +286,17 @@ Part of the [Peasy Tools](https://peasytools.com) open-source developer ecosyste
 | peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | [crate](https://crates.io/crates/peasy-document) | Markdown, HTML, CSV, JSON conversion — [peasyformats.com](https://peasyformats.com) |
 | peasytext | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | [crate](https://crates.io/crates/peasytext) | Text case conversion, slugify, word count — [peasytext.com](https://peasytext.com) |
 
+## Embed Widget
+
+Embed [PeasyAudio](https://peasyaudio.com) widgets on any website with [peasy-audio-embed](https://widget.peasyaudio.com):
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/peasy-audio-embed@1/dist/embed.min.js"></script>
+<div data-peasyaudio="entity" data-slug="example"></div>
+```
+
+Zero dependencies · Shadow DOM · 4 themes (light/dark/sepia/auto) · [Widget docs](https://widget.peasyaudio.com)
+
 ## License
 
 MIT
