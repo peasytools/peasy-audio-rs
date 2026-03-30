@@ -1,6 +1,6 @@
 [package]
 name = "peasy-audio"
-version = "0.2.3"
+version = "0.2.4"
 edition = "2021"
 authors = ["PeasyTools"]
 description = "Rust client for PeasyAudio — audio tools, glossary, and guides API"
